@@ -17,7 +17,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var userPassword: UITextField!
     @IBOutlet weak var Login: UIButton!
     
-    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var dateTextField: UITextField!
     
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var castTV: UITextView!
@@ -90,28 +91,28 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Return NO if you do not want the item to be re-orderable.
         return false
     }
-    
+  
 
-   @IBAction func loginbutton(_ sender: UIButton) {
-        let username = userName.text ?? ""
-        let Password = userPassword.text ?? ""
+@IBAction func adminLoginbutton(_ sender: UIButton) {
+        //let username = userName.text ?? ""
+       let Password = adminPassword.text ?? ""
         
-        let validUsername = "user"
+     //   let validUsername = "user"
         let validPassword = "password"
+   //    if username == validUsername && Password == validPassword
         
-        if username == validUsername && Password == validPassword{
+        if Password == validPassword{
             //Successful Login
             showAlert(title:"Success", message: "Login Successful")
+            let MovieTableView = MovieTableView()
             //
             //performSegue(withIdentifier: "MovieTableView", sender: nil)
            // navigateToMovieTableView()
-            navigationController?.pushViewController(UITableView, animated: true)
+            navigationController?.pushViewController(MovieTableView, animated: true)
         }
         else{
             showAlert(title: "Error", message: "Invalid details")
         }
-        
- 
     }
     private func showAlert(title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -133,6 +134,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
    }
    
    */
+  
     
     @IBAction func saveAction(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -141,7 +143,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         {
             let entity = NSEntityDescription.entity(forEntityName: "Movie", in: context)
             let newMovie = Movie(entity: entity!, insertInto: context)
-            newMovie.id = Int32(movieList.count as NSNumber)
+            newMovie.id = Int32(truncating: movieList.count as NSNumber)
             newMovie.title = titleTF.text
             newMovie.cast = castTV.text
             do{
@@ -177,6 +179,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
         }
     }
+    
+
+
+    @IBAction func bookButtonTapped(_ sender: UIButton) {
+           guard let name = nameTextField.text, !name.isEmpty,
+                 let date = dateTextField.text, !date.isEmpty else {
+               // Show alert for incomplete fields
+               return
+           }
+           // Perform booking logic here
+           let confirmationMessage = "Booking confirmed for \(name) on \(date)"
+           showAlert(message: confirmationMessage)
+       }
+
+       func showAlert(message: String) {
+           let alertController = UIAlertController(title: "Booking", message: message, preferredStyle: .alert)
+           alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+           present(alertController, animated: true, completion: nil)
+       }
+    
 }
 class PostCell: UICollectionViewCell{
     
@@ -185,11 +207,29 @@ class PostCell: UICollectionViewCell{
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var pTitle: UILabel!
     @IBOutlet weak var pSubTitle: UILabel!
+ /*
+    @IBOutlet weak var seatsLabel: UILabel!
+    @IBOutlet weak var bookButton: UIButton!
+    */
     
     override func awakeFromNib() {
         background.layer.cornerRadius = 10
         image.layer.cornerRadius = 10
     }
+    
+ /*   func configure(with movie: Movie) {
+        // Populate existing UI elements...
+        seatsLabel.text = "Available Seats: \(movie.availableSeats)"
+        bookButton.addTarget(self, action: #selector(bookButtonTapped), for: .touchUpInside)
+    }
+    
+    
+    func bookButtonTapped() {
+        // Handle the booking button tap
+        let bookingInfoVC = BookingInfoViewController() // Create a new view controller
+        bookingInfoVC.movie = movieList[indexPath.row] // Pass the selected movie
+        present(bookingInfoVC, animated: true, completion: nil)
+    }*/
 }
 
 

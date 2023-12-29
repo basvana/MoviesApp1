@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1C13244C2B35DDF9004B49BF /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C13244B2B35DDF9004B49BF /* MovieCell.swift */; };
 		1C13244E2B35DE23004B49BF /* MovieTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C13244D2B35DE23004B49BF /* MovieTableView.swift */; };
-		1C1324512B35FEB8004B49BF /* MovieBookingsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C13244F2B35FEB8004B49BF /* MovieBookingsApp.xcdatamodeld */; };
 		1C6AEC6E2B342BCA00B815A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6AEC6D2B342BCA00B815A4 /* AppDelegate.swift */; };
 		1C6AEC702B342BCA00B815A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6AEC6F2B342BCA00B815A4 /* SceneDelegate.swift */; };
 		1C6AEC722B342BCA00B815A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6AEC712B342BCA00B815A4 /* ViewController.swift */; };
@@ -19,6 +18,7 @@
 		1C6AEC912B342BCE00B815A4 /* MovieBookingsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6AEC902B342BCE00B815A4 /* MovieBookingsUITestsLaunchTests.swift */; };
 		1C8F979E2B35551000E8711D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C8F979D2B35551000E8711D /* Assets.xcassets */; };
 		1CA927F82B3D6620008DB605 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CA927F62B3D6620008DB605 /* Main.storyboard */; };
+		1CA927FB2B3DBC28008DB605 /* MovieBookingsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1CA927F92B3DBC28008DB605 /* MovieBookingsApp.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 /* Begin PBXFileReference section */
 		1C13244B2B35DDF9004B49BF /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		1C13244D2B35DE23004B49BF /* MovieTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableView.swift; sourceTree = "<group>"; };
-		1C1324502B35FEB8004B49BF /* MoieBookingsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoieBookingsApp.xcdatamodel; sourceTree = "<group>"; };
 		1C6AEC6A2B342BCA00B815A4 /* MovieBookings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieBookings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C6AEC6D2B342BCA00B815A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C6AEC6F2B342BCA00B815A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +54,7 @@
 		1C6AEC902B342BCE00B815A4 /* MovieBookingsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBookingsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1C8F979D2B35551000E8711D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		1CA927F72B3D6620008DB605 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1CA927FA2B3DBC28008DB605 /* MoieBookingsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoieBookingsApp.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +110,8 @@
 				1C6AEC712B342BCA00B815A4 /* ViewController.swift */,
 				1C13244B2B35DDF9004B49BF /* MovieCell.swift */,
 				1CA927F62B3D6620008DB605 /* Main.storyboard */,
-				1C13244F2B35FEB8004B49BF /* MovieBookingsApp.xcdatamodeld */,
 				1C13244D2B35DE23004B49BF /* MovieTableView.swift */,
+				1CA927F92B3DBC28008DB605 /* MovieBookingsApp.xcdatamodeld */,
 				1C8F979D2B35551000E8711D /* Assets.xcassets */,
 				1C6AEC782B342BCD00B815A4 /* LaunchScreen.storyboard */,
 				1C6AEC7B2B342BCD00B815A4 /* Info.plist */,
@@ -267,10 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CA927FB2B3DBC28008DB605 /* MovieBookingsApp.xcdatamodeld in Sources */,
 				1C6AEC722B342BCA00B815A4 /* ViewController.swift in Sources */,
 				1C6AEC6E2B342BCA00B815A4 /* AppDelegate.swift in Sources */,
 				1C13244C2B35DDF9004B49BF /* MovieCell.swift in Sources */,
-				1C1324512B35FEB8004B49BF /* MovieBookingsApp.xcdatamodeld in Sources */,
 				1C13244E2B35DE23004B49BF /* MovieTableView.swift in Sources */,
 				1C6AEC702B342BCA00B815A4 /* SceneDelegate.swift in Sources */,
 			);
@@ -617,12 +617,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		1C13244F2B35FEB8004B49BF /* MovieBookingsApp.xcdatamodeld */ = {
+		1CA927F92B3DBC28008DB605 /* MovieBookingsApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				1C1324502B35FEB8004B49BF /* MoieBookingsApp.xcdatamodel */,
+				1CA927FA2B3DBC28008DB605 /* MoieBookingsApp.xcdatamodel */,
 			);
-			currentVersion = 1C1324502B35FEB8004B49BF /* MoieBookingsApp.xcdatamodel */;
+			currentVersion = 1CA927FA2B3DBC28008DB605 /* MoieBookingsApp.xcdatamodel */;
 			path = MovieBookingsApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
